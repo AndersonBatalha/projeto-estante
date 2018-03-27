@@ -1,0 +1,1 @@
+from cadastro_professor_view import CadastroProfessorView

@@ -1,4 +1,4 @@
-"""projeto_estante URL Configuration
+"""estanteapp URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.11/topics/http/urls/
@@ -18,5 +18,8 @@ from django.conf.urls import url
 from estanteapp.views import *
 
 urlpatterns = [
-    url(r'', IndexView.as_view(), name='index'),
+    url(r'^$', IndexView.as_view(), name='index'),
+    url(r'^professor/cadastro$', CadastroProfessorView.as_view(), name='cadastro_professor'),
+    url(r'^login/$', LoginView.as_view(), name='login'),
+    url(r'^logout/$', LogoutView.as_view(), name='logout'),
 ]

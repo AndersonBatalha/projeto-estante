@@ -30,16 +30,14 @@
                 </div>
             </div>
             <h3 class="centered">
-{#                <a class="color-a-brown" href="{% url 'estante:logout' %}">#}
-                <a class="color-a-brown" href="#">
+                <a class="color-a-brown" href="{% url 'estante:logout' %}">
                     <i class="sign out alternate ui icon"></i> Sair</a>
             </h3>
 
 
             {% endif %}
             {% if not user.is_authenticated %}
-{#            <form class='ui form' method="POST" action="{% url 'estante:login' %}">#}
-            <form class='ui form' method="POST" action="#">
+            <form class='ui form' method="POST" action="{% url 'estante:login' %}">
                 {% csrf_token %}
                 <div class="field">
                     <label class="color-label-brown">Usuário</label>
@@ -55,8 +53,7 @@
                 <div class="ui white fluid  label">
                     <h4 class="color-h-green centered">
                         <i class="user icon"></i> Não tem cadastro?
-{#                        <a class='color-a-brown' href="{% url 'estante:cadastro-professor' %}">#}
-                        <a class='color-a-brown' href="#">
+                        <a class='color-a-brown' href="{% url 'estante:cadastro_professor' %}">
                             <i class="plus icon"></i>Cadastre-se</a>
                     </h4>
                 </div>

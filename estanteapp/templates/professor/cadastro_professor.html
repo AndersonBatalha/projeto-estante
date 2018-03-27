@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="two wide column"></div>
+
+    <div class="twelve wide column">
+
+        <h1 class="color-h-green">Cadastro de professor</h1>
+
+        <form class="ui form segment" method="POST" action="{% url 'estante:cadastro_professor' %}">
+            {% csrf_token %}
+
+            <div class="two fields">
+                <div class="field">
+                    <label class="color-label-brown">Nome:</label> {# {{form.username.label}} #}
+                    {{ form.first_name }}
+                    {% if form.first_name.errors %}
+                        <div class="ui red pointing label">
+                            {{ form.first_name.errors }}
+                        </div>
+                    {% endif %}
+                </div>
+
+                <div class="field">
+                    <label class="color-label-brown">Matéria:</label>
+                    {{ form.materia }}
+                    {% if form.materia.errors %}
+                        <div class="ui red pointing label">
+                            {{ form.materia.errors }}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="two fields">
+                <div class="field">
+                    <label class="color-label-brown">Login:</label>
+                    {{ form.username }}
+                    {% if form.username.errors %}
+                        <div class="ui red pointing label">
+                            {{ form.username.errors }}
+                        </div>
+                    {% endif %}
+                </div>
+
+                <div class="field">
+                    <label class="color-label-brown">Senha:</label>
+                    {{ form.password }}
+                    {% if form.password.errors %}
+                        <div class="ui red pointing label">
+                            {{ form.password.errors }}
+                        </div>
+                    {% endif %}
+
+                </div>
+            </div>
+
+            <div class="ui grid">
+                <div class="sixteen wide column">
+                    <button type="submit" class="ui green button color-button rigth floated">Cadastrar</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <div class="two wide column"></div>
+
+    {#{{ form.as_p }}#}
+s
+{% endblock %}

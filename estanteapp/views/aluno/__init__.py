@@ -1,0 +1,1 @@
+from cadastro_aluno_view import CadastroAlunoView

@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="two wide column"></div>
+
+<div class="twelve wide column">
+
+    {% if id %}
+
+    <h1 class="color-h-green">Edição de Autor</h1>
+
+    <form class="ui form segment" method="POST" action="{% url 'estante:edicao_autor' id %}">
+    {% else %}
+
+    <h1 class="color-h-green">Cadastro de Autor</h1>
+
+    <form class="ui form segment" method="POST" action="{% url 'estante:cadastro_autor' %}">
+    {% endif %}
+        {% csrf_token %}
+
+        <div class="ui form">
+
+            <div class="field">
+                <label class="color-label-brown">Nome</label>
+                {{ form.nome }}
+                {% if form.nome.errors %}
+                    <div class="ui red pointing label">
+                        {{ form.nome.errors }}
+                    </div>
+                {% endif %}
+            </div>
+
+            <div class="ui grid">
+                <div class="sixteen wide column">
+                    <button type="submit" class="ui green button color-button right floated relaxed">Cadastrar</button>
+                </div>
+             </div>
+        </div>
+
+    </form>
+</div>
+
+<div class="two wide column"></div>
+
+{#{{ form.as_p }}#}
+
+{% endblock %}

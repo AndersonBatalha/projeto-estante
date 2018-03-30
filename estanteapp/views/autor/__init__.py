@@ -1,0 +1,3 @@
+from cadastro_autor_view import CadastroAutorView
+from lista_autor_view import ListaAutorView
+from edicao_autor_view import EdicaoAutorView

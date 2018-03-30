@@ -20,6 +20,10 @@ from estanteapp.views import *
 urlpatterns = [
     url(r'^$', IndexView.as_view(), name='index'),
     url(r'^professor/cadastro$', CadastroProfessorView.as_view(), name='cadastro_professor'),
+    url(r'^aluno/cadastro$', CadastroAlunoView.as_view(), name='cadastro_aluno'),
+    url(r'^autor/cadastro$', CadastroAutorView.as_view(), name='cadastro_autor'),
+    url(r'^autor/lista$', ListaAutorView.as_view(), name='lista_autor'),
+    url(r'^autor/edicao/(?P<id>\d+)', EdicaoAutorView.as_view(), name='edicao_autor'),
     url(r'^login/$', LoginView.as_view(), name='login'),
     url(r'^logout/$', LogoutView.as_view(), name='logout'),
 ]

@@ -5,7 +5,7 @@
 
     <div class="twelve wide column">
 
-        <h1 class="color-h-green">Cadastro de Professor</h1>
+        <h1 class="color-h-green">Cadastro de Aluno</h1>
 
         <form class="ui form segment" method="POST" action="{% url 'estante:cadastro_professor' %}">
             {% csrf_token %}
@@ -22,11 +22,11 @@
                 </div>
 
                 <div class="field">
-                    <label class="color-label-brown">Matéria:</label>
-                    {{ form.materia }}
-                    {% if form.materia.errors %}
+                    <label class="color-label-brown">Curso:</label>
+                    {{ form.curso }}
+                    {% if form.curso.errors %}
                         <div class="ui red pointing label">
-                            {{ form.materia.errors }}
+                            {{ form.curso.errors }}
                         </div>
                     {% endif %}
                 </div>

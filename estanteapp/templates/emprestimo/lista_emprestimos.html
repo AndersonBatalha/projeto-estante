@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="two wide column"></div>
+
+<div class="twelve wide column">
+    <h1 class="color-h-green">Lista de Empréstimos</h1>
+    <table class="ui celled table">
+
+        <thead>
+            <tr>
+                <th>Livro</th>
+                <th class="ui right aligned">AÇÕES<i class="setting icon"></i></th>
+            </tr>
+        </thead>
+
+        <tbody>
+        {% for emprestimo in emprestimos %}
+            <tr>
+                <td>{{ emprestimo.livro }}</td>
+                <td class="ui right aligned">
+                    <a href="{% url 'estante:edicao_autor' autor.id %}">
+                        <div class="ui labeled icon button">
+                            <i class="edit icon"></i>Editar
+                        </div>
+                    </a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+
+    </table>
+</div>
+
+<div class="two wide column"></div>
+
+{% endblock %}

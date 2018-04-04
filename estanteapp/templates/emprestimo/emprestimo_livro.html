@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="two wide column"></div>
+
+    <div class="twelve wide column">
+
+        <h1 class="color-h-green">Empréstimo de Livro</h1>
+
+        <form class="ui form segment" method="POST" action="{% url 'estante:emprestimo_livro' %}">
+            {% csrf_token %}
+
+            <div class="one field">
+                <div class="field">
+                    <label class="color-label-brown">Livro:</label> {# {{form.username.label}} #}
+                    {{ form.livro }}
+                    {% if form.livro.errors %}
+                        <div class="ui red pointing label">
+                            {{ form.livro.errors }}
+                        </div>
+                    {% endif %}
+                </div>
+
+                <div class="field">
+                    <label class="color-label-brown">Devolução:</label>
+                    {{ form.devolvido }}
+                    {% if form.devolvido.errors %}
+                        <div class="ui red pointing label">
+                            {{ form.devolvido.errors }}
+                        </div>
+                    {% endif %}
+                </div>
+
+
+            <div class="ui grid">
+                <div class="sixteen wide column">
+                    <button type="submit" class="ui green button color-button right floated">Cadastrar</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <div class="two wide column"></div>
+
+{% endblock %}

@@ -1,4 +1,3 @@
-from django.contrib.auth.models import Group
 from django.shortcuts import render, redirect
 from django.views import View
 

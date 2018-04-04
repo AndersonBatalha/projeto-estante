@@ -14,7 +14,7 @@ class LoginView(View):
 
         if user is not None and user.is_active:
             login(request, user)
-            grupo_usuario = User.objects.get(username=user).groups.all()
-            request.session['grupo'] = str(grupo_usuario[0].name)
+            usuario = User.objects.get(username=user)
+            request.session['grupo'] = str(usuario)
 
         return redirect('estante:index')

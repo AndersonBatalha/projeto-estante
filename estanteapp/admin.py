@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from django.contrib import admin
 
-from estanteapp.models import ProfessorModel, AlunoModel, AutorModel, LivroModel
+from estanteapp.models import ProfessorModel, AlunoModel, AutorModel, LivroModel, EmprestimoModel
 
 # Register your models here.
 
@@ -11,3 +11,4 @@ admin.site.register(ProfessorModel)
 admin.site.register(AlunoModel)
 admin.site.register(AutorModel)
 admin.site.register(LivroModel)
+admin.site.register(EmprestimoModel)

@@ -38,6 +38,13 @@
                             Cadastrar Autor
                         </button>
                     </a>
+                    <br>
+                    <a href="{% url 'estante:cadastro_livro' %}">
+                        <button class="color-h-green fluid ui button">
+                            <i class="address book icon"></i>
+                            Cadastrar Livro
+                        </button>
+                    </a>
                 </div>
             </div>
 
@@ -66,21 +73,13 @@
                     <h4 class="color-h-green centered">
                         <i class="user icon"></i> Não tem cadastro?
                         <a class='color-a-brown' href="{% url 'estante:cadastro_professor' %}">
-                            <i class="plus icon"></i>Cadastre-se</a>
+                            <i class="plus icon"></i>Professor</a>
+                        <a class='color-a-brown' href="{% url 'estante:cadastro_aluno' %}">
+                            <i class="plus icon"></i>Aluno</a>
                     </h4>
                 </div>
             </div>
 
-            <div class="sixteen wide column">
-                <div class="ui basic segment">
-                    <a href="{% url 'estante:cadastro_aluno' %}">
-                        <button class="color-h-green fluid ui button">
-                            <i class="icon user"></i>
-                            Cadastrar Aluno
-                        </button>
-                    </a>
-                </div>
-            </div>
             {% endif%}
         </div>
 

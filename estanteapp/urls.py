@@ -22,6 +22,7 @@ urlpatterns = [
     url(r'^professor/cadastro$', CadastroProfessorView.as_view(), name='cadastro_professor'),
     url(r'^aluno/cadastro$', CadastroAlunoView.as_view(), name='cadastro_aluno'),
     url(r'^autor/cadastro$', CadastroAutorView.as_view(), name='cadastro_autor'),
+    url(r'^livro/cadastro$', CadastroLivroView.as_view(), name='cadastro_livro'),
     url(r'^autor/lista$', ListaAutorView.as_view(), name='lista_autor'),
     url(r'^autor/edicao/(?P<id>\d+)', EdicaoAutorView.as_view(), name='edicao_autor'),
     url(r'^login/$', LoginView.as_view(), name='login'),

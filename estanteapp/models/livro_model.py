@@ -1,8 +1,7 @@
 from django.db import models
 from django.db.models import Model
 
-from estanteapp.models import ProfessorModel
-from estanteapp.models.autor_model import AutorModel
+from estanteapp.models import AutorModel, ProfessorModel
 
 
 class LivroModel(Model):

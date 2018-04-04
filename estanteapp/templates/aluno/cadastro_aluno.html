@@ -7,12 +7,12 @@
 
         <h1 class="color-h-green">Cadastro de Aluno</h1>
 
-        <form class="ui form segment" method="POST" action="{% url 'estante:cadastro_professor' %}">
+        <form class="ui form segment" method="POST" action="{% url 'estante:cadastro_aluno' %}">
             {% csrf_token %}
 
             <div class="two fields">
                 <div class="field">
-                    <label class="color-label-brown">Nome:</label> {# {{form.username.label}} #}
+                    <label class="color-label-brown">Nome:</label>
                     {{ form.first_name }}
                     {% if form.first_name.errors %}
                         <div class="ui red pointing label">
@@ -57,7 +57,7 @@
 
             <div class="ui grid">
                 <div class="sixteen wide column">
-                    <button type="submit" class="ui green button color-button rigth floated">Cadastrar</button>
+                    <button type="submit" class="ui green button color-button right floated">Cadastrar</button>
                 </div>
             </div>
 
